@@ -77,7 +77,6 @@ public class ActorController {
 	public ResponseEntity<?> fetchActorByCategories(@PathVariable("c1") String category1 ,@PathVariable("c2") String category2){
 		//use service
 		try {
-			//Check
 			List<Actor> fetchActorByCategories = service.fetchActorByCategories(category1, category2);
 			System.out.println("The list is::"+fetchActorByCategories);
 			return new ResponseEntity<List<Actor>>(fetchActorByCategories, HttpStatus.OK);
