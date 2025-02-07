@@ -1,0 +1,41 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+spring:
+  application:
+    name: BootRestProj-0-MiniProjectCURDOperation
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///product
+    username: root
+    password: amiya123
+
+    hikari:
+      minimum-idle: "10"
+      maximum-pool-size: 100
+      connection-timeout: 60000
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+server:
+  port: 8084
+
+
+
+actor:
+ module:
+   messages:
+     save-success: Actor is saved with id value
+     save-failure: Actor is not saved with id value
+     find-by-id-failure: Actor is not found
+     findy-by-id-invalid: Invalid Actor id
+     delete-success: Actor is deleted
+     delete-failure: Actor is not found for deletion
+     update-success: Actor is updated 
