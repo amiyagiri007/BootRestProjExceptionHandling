@@ -36,6 +36,7 @@ public class ErrorDetails {
 	}
 	public ErrorDetails() {
 		int a =2;
+		System.out.println(a);
 		System.out.println("ErrorDetails.ErrorDetails()");
 	}
 
