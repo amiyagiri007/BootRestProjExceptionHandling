@@ -35,7 +35,6 @@ public class ErrorDetails {
 		this.status = status;
 	}
 	public ErrorDetails() {
-		// TODO Auto-generated constructor stub
 	}
 
 }
