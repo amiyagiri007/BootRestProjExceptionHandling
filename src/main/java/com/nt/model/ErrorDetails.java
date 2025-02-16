@@ -35,8 +35,7 @@ public class ErrorDetails {
 		this.status = status;
 	}
 	public ErrorDetails() {
-		int a =2;
-		System.out.println(a);
+//		System.out.println(a);
 		System.out.println("ErrorDetails.ErrorDetails()");
 	}
 
