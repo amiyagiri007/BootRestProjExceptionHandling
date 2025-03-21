@@ -64,7 +64,7 @@ public class ActorController {
 	@GetMapping("/byId/{id}")
 	public ResponseEntity<?> getActor(@PathVariable Integer id){
 		/*try {*/
-			Actor actor = 	service.getActorById(id);
+			var actor = 	service.getActorById(id);
 			return new ResponseEntity<Actor>(actor,HttpStatus.OK);
 	/*	}catch(Exception e) {
 			e.printStackTrace();
@@ -91,20 +91,20 @@ public class ActorController {
 	@PutMapping("/update")   //full update or complete updation
 	public ResponseEntity<String> updateActor(@RequestBody Actor actor){
 			//use service
-			String msg  = service.updateActor(actor);
+			var msg  = service.updateActor(actor);
 			return new ResponseEntity<String>(msg,HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<?> deleteActor(@PathVariable Integer id){
-			String msg = service.deleteActorById(id);
+			var msg = service.deleteActorById(id);
 			return new ResponseEntity<String>(msg,HttpStatus.OK);
 	}
 	
 	@PatchMapping("/partial/{id}/{mobno}")
 	public ResponseEntity<String> partialUpdate(@PathVariable int id,@PathVariable("mobno") long phoneNo){
 			//use service
-			String msg = service.updateMob(id, phoneNo);
+			var msg = service.updateMob(id, phoneNo);
 			return new ResponseEntity<String>(msg,HttpStatus.OK);
 	}
 
