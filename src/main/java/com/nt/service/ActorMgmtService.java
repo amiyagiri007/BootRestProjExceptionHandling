@@ -32,7 +32,7 @@ public class ActorMgmtService implements IActorMgmtService {
 	
 	@Override
 	public String registerActor(Actor actor) {
-		Actor saved = repo.save(actor);
+		var saved = repo.save(actor);
 		
 		return saved.getActorId() != null ? messages.get(ActorConstants.SAVE_SUCCESS)+saved.getActorId() : messages.get(ActorConstants.SAVE_FAILURE);
 	}
